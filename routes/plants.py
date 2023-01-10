@@ -5,8 +5,8 @@ from models.models import Plant, Employee
 
 @app.route("/add-plant")
 def add_plant():
-    employees = Employee.query.all()
-    return render_template("add_plant.html", employees=employees)
+    plants = Plant.query.all()
+    return render_template("add_plant.html", plants=plants)
 
 
 @app.route("/save-plant", methods=["POST"])
